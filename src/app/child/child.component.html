@@ -1,0 +1,21 @@
+<div class="card">
+   <div class="card-title ml-4">
+      <p class="text-info font">Child Component</p>
+   </div>
+   <div class="card-body pt-0">
+      <p class="text-primary text-center font-weight-bold">MANAGE YOUR COUNT.!</p>
+      <div class="text-center">
+         <p class="text-center h3 font-weight-bold ">{{count}}</p>
+         <button class="btn btn-success" (click)="increase()">Increase</button>
+         <button class="btn btn-danger ml-3" (click)="decrease()">Decrease</button>
+      </div>
+   </div>
+   <div class="card mx-2">
+      <div class="card-body">
+         <p class="text-center font-weight-bold text-primary">VIEW CHILD </p>
+         <p>Parent Message in Child Component </p>
+         <div *ngIf="alert" class="alert alert-warning text-dark font-weight-bold py-3">{{message}}</div>
+    <button class="btn btn-info" (click)="toParent()">send to parent</button>
+      </div>
+   </div>
+</div>

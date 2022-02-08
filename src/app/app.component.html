@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-body">
+    <p class="text-success">Parent Component</p>
+    <div class="card">
+      <div class="card-body">
+       <p [ngStyle]="{'color':upto <=5?'green':'red'}"> {{answer | json}} </p>
+        <app-child (SendCount)="fromChild($event)"></app-child>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <p class="text-info">parent component</p>
+  <div class="card-body">
+    <div class="card">
+      <div class="card-body">
+        <button class="btn btn-warning" (click)="alert()">ToChild</button>
+      </div>
+      <p>from Child component </p>
+     <p *ngIf="childMsg"> {{message}} </p>
+    </div>
+</div>
+</div>
